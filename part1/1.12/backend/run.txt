@@ -1,0 +1,2 @@
+docker build -t docker_backend_112 .
+docker run -p 8000:8000 -it docker_backend_112
