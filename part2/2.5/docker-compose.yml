@@ -1,0 +1,26 @@
+version: '3.5'
+
+services:
+  backend:
+    image: docker_backend_112
+    container_name: backend
+    ports:
+      - 8000:8000
+    environment:
+      - REDIS=redis
+    networks:
+      - database-network
+  redis:
+    image: redis
+    container_name: radis
+    expose:
+      - 6379
+    ports:
+      - 6379:6379
+    networks:
+      - database-network
+
+networks:
+  database-network:
+    name: redis-network  
+

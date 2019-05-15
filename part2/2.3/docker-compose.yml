@@ -2,7 +2,10 @@ version: '3.5'
 
 services:
   backend:
-    image: 
-    environment:
-      - VARIABLE=VALUE
-      - VARIABLE 
+    image: docker_backend_112
+    ports:
+      - 8000:8000
+  frontend:
+    image: docker_frontend_112
+    ports:
+      - 5000:5000

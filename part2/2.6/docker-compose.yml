@@ -1,0 +1,39 @@
+version: '3.5'
+
+services:
+  backend:
+    image: docker_backend_112
+    container_name: backend
+    ports:
+      - 8000:8000
+    environment:
+      DB_USERNAME: postgres
+      DB_PASSWORD: example
+      DB_HOST: pgsql
+    networks:
+      - database-network
+    depends_on:
+      - pgsql
+    links:
+      - pgsql
+  pgsql:
+    image: postgres
+    container_name: postgresql
+    restart: unless-stopped
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: example
+    networks:
+      - database-network
+    volumes:
+      - database:/var/lib/postgresql/data
+
+networks:
+  database-network:
+    name: pgsql-network  
+
+volumes:
+  database:
+
+
