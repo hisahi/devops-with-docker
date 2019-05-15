@@ -1,0 +1,1 @@
+docker run -v $HOME/tmp/log.txt:/usr/app/log.txt:z -it devopsdockeruh/first_volume_exercise

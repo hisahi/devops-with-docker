@@ -1,0 +1,6 @@
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                     PORTS               NAMES
+bba0f6612933        mediawiki           "docker-php-entrypoi…"   30 seconds ago      Exited (0) 9 seconds ago                       amazing_chebyshev
+6389f5754b78        nginx               "nginx -g 'daemon of…"   2 minutes ago       Exited (0) 3 seconds ago                       jolly_einstein
+1843ba2362e6        irssi               "irssi"                  2 minutes ago       Exited (1) 2 minutes ago                       recursing_murdock
+
