@@ -1,0 +1,4 @@
+# Example:
+docker build -t docker-builder .
+docker run --privileged -it docker-builder https://github.com/docker-hy/docs-exercise USERNAME/docker-hy-docs-exercise
+

@@ -1,0 +1,2 @@
+docker run -v $(pwd):/dl:z -it docker-yledl https://areena.yle.fi/1-50160138
+

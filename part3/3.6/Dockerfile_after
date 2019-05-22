@@ -1,0 +1,7 @@
+FROM byrnedo/alpine-curl
+
+RUN adduser -S curluser
+USER curluser
+ENTRYPOINT ["/bin/sh"]
+CMD ["-c", "echo \"Input website:\"; read website; echo \"Searching..\"; sleep 1; curl http://$website;"]
+

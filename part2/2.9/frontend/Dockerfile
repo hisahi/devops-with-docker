@@ -1,7 +1,7 @@
 FROM node:10
 
 WORKDIR /usr/src/app
-ENV API_URL=http://localhost/api
+ENV API_URL=http://localhost:8000/api
 
 COPY package*.json ./
 RUN npm install
